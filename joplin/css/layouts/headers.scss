@@ -1,0 +1,100 @@
+// COA Global Header
+
+.coa-header {
+    display: flex;
+    padding: 0.75rem;
+    background: $coa-color-darkest-gray;
+    position: fixed;
+    z-index: 4;
+    width: 100%;
+}
+
+.coa-user {
+    color: $coa-color-lightest-blue;
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+// COA Secondary Header
+
+.header.secondary {
+    width: calc(100% - #{$nav-wrapper-width});
+    background: $coa-color-gray;
+    position: fixed;
+    height: 80px;
+    padding: 1rem 1.5rem;
+    z-index: 3;
+    display: flex;
+    h1 {
+        color: $coa-color-orange;
+        text-transform: capitalize;
+        font-style: italic;
+    }
+}
+
+.coa-search-results-nav {
+  padding: 0px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+// COA Search Results
+
+// The built-in Wagtail class is rendered after our custom styling.
+// So, Joplin needs to "cut-in-line" with cascase override `!important` here.
+
+.coa-search-header {
+  position: static !important;
+  width: 100% !important;
+  height: 40px !important;
+}
+
+.nav-search li {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+
+.icon-search:before {
+  margin-top: 5px !important;
+  color: #777 !important;
+}
+
+.icon-search input {
+  color: #262626 !important;
+  background-color: hsla(0,0%,39%,.15) !important;
+}
+
+.icon-search input::placeholder {
+  color: #aaa !important;
+}
+
+.listing-filter {
+  margin: 0 !important;
+  padding: 20px !important;
+}
+
+.coa-search-results-h1 {
+  font-size: 28px;
+  margin: 0px;
+  padding-right: 20px;
+  font-weight: 400;
+  font-style: normal !important;
+}
+
+// Header Actions section
+
+.header .actions {
+    display: flex;
+    margin: 0 40px auto auto;
+}
+
+.secondary-actions {
+    width: calc(100% - #{$nav-wrapper-width});
+    background: #e5e4de;
+    position: fixed;
+    z-index: 30;
+    display: flex;
+    top: $edit-page-tab-bar-top;
+    padding-left: 1rem;
+    height: 40px;
+}

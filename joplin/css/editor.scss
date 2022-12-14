@@ -1,0 +1,157 @@
+// stop the annoying uppercase: TODO: font size
+// TODO: had to port these from h2 to title-wrapper for 2.6,
+// maybe there is other niceness we are missing out on from the refactor
+// by just hiding these
+
+@import './css/variables';
+
+.object .title-wrapper {
+    background: inherit;
+    text-transform: none;
+}
+.object > .title-wrapper:before,
+.object > .title-wrapper label:before {
+    display: none;
+}
+.object {
+    border-bottom: 1px dashed grey !important;
+}
+
+.icon-help-inverse.show {
+    display: inline;
+    float: right;
+    margin: 0.5rem 4rem 0 0;
+}
+
+.tab-nav.merged {
+    background-color: #e5e4de;
+    z-index: 39;
+}
+
+.tab-nav {
+    z-index: 32;
+}
+
+.editor__save-button {
+    min-width: 145px;
+}
+
+fieldset {
+    max-width: none !important;
+}
+
+label {
+    width: auto !important;
+}
+
+.messages {
+    position: fixed;
+    top: 0px;
+    width: 75%;
+}
+
+.header.coa-header {
+    z-index: 35 !important;
+}
+
+.struct-block {
+    .fields {
+        float: none !important;
+    }
+}
+
+.sequence-container.sequence-type-list {
+    width: 100% !important;
+}
+
+.coa-placeholder-elm {
+    color: $coa-color-dark-gray2 !important;
+}
+
+/**
+ * Add some spacing to the rich-text-button-link inside of Draftail (our custom rich text feature defined in wagtail_hooks)
+ */
+.Draftail-block--rich-text-button-link {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    margin: 16px 0;
+}
+
+/**
+ * Add CSS-based text to the top  and bottom of the Draftail rich-text-button-link section.
+ */
+.Draftail-block--rich-text-button-link::before {
+    content: 'This link will be rendered a button on the public-facing website.';
+    color: #555;
+    font-size: 12px;
+}
+
+.Draftail-block--rich-text-button-link::after {
+    content: 'If you would like multiple buttons, please style each one as a button separately.';
+    color: #555;
+    font-size: 12px;
+}
+
+/*******
+New Containers for .coa-edit-page
+********/
+
+// Top-level wrapper around all edit page content
+.coa-edit-page__wrapper {
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+        font-size: 1.5em;
+    }
+}
+
+// Top-level wrapper around edit page headers
+.coa-edit-page__header-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background: #EDEDED;
+}
+
+.coa-edit-page__header-row-messages {
+}
+
+.coa-edit-page__header-row-middle {
+    display: flex;
+    flex-direction: row;
+}
+
+.coa-edit-page__header-row-secondary-actions {
+}
+
+// Wrapper around form and sidebar-preview
+.coa-edit-page__form-wrapper {
+    display: flex;
+    flex-direction: row;
+    margin-top: 150px;
+}
+
+.coa-message__wrapper {
+    background: $coa-color-bold-yellow;
+    padding: 1rem;
+    font-size: 1rem;
+    margin-left: -1.5rem;
+    margin-right: 1rem;
+    margin-top: -1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.coa-message__link {
+    text-decoration: underline;
+    color: $coa-color-primary-blue;
+}
+
+.coa-message__close-button {
+    &:hover {
+      cursor: pointer;
+    }
+}

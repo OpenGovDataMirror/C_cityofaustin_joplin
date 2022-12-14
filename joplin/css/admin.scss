@@ -1,0 +1,149 @@
+@import './variables';
+@import './utilities/border-box-reset';
+@import './layouts/headers';
+@import './layouts/left_sidebar_nav';
+@import './layouts/listing';
+@import './buttons';
+@import './pages/edit';
+
+// This is the css that create the hidden button in the lamp in the seal to toggle joplin UI transition.
+@import './../joplin_UI/_joplin_ui_transition.scss';
+
+
+// Wagtail overrides
+
+.full input {
+    padding: 1em;
+}
+.logo {
+    display: none;
+}
+
+.object fieldset,
+.object .field-content {
+    width: 100%;
+}
+
+.translation-tab .object .object-help {
+    width: auto;
+    font-size: 1.2em;
+}
+.translation-tab .object fieldset {
+    padding-top: 0.5em;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.listing .actions {
+    visibility: visible;
+}
+
+.page-explorer header,
+.homepage header,
+//,hasform helps distinguish that this is on a page chooser modal
+// we need to unhide headers for modals only, and this was the most specific
+// selector I could find
+.page-editor header:not(.hasform) {
+    display: none;
+}
+
+.page-editor header.hasform {
+    background-color: white;
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+    h1 {
+        color: black;
+        text-transform: none;
+    }
+}
+
+.modal-body {
+    .tab-nav {
+        position: initial;
+    }
+}
+
+.modal-content {
+    .button.close.icon {
+        top: 5px;
+    }
+}
+
+.modal-body label[for='id_q'] {
+    display: none;
+}
+
+.page-results h2 {
+    text-transform: none;
+}
+
+.pagination {
+    margin-top: $secondary-header-height * 3/2;
+}
+
+.messages {
+    position: fixed;
+    top: 0px;
+    width: 75%;
+}
+
+.user-account {
+    display: flex;
+    position: static;
+}
+
+.header.coa-header > .dropdown > .dropdown-toggle {
+    background-color: $coa-color-darkest-gray;
+    border-left: none;
+    color: #fff;
+    text-transform: none;
+    line-height: 2.8em;
+    cursor: pointer;
+    position: absolute;
+    right: 9%;
+    height: auto;
+    top: 18%;
+}
+
+.user-account-dropdown ul {
+    background-color: $coa-color-gray;
+    margin-left: -50px;
+}
+
+.user-account-dropdown ul a {
+    padding: 0.5em;
+    text-transform: none;
+    color: black;
+}
+
+.user-account-dropdown ul a:hover {
+    background-color: $coa-color-lightest-blue;
+}
+
+.user-account-dropdown-menu {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1px;
+    left: 96px !important;
+    display: none;
+}
+
+.account-link {
+    display: inherit;
+}
+
+.avatar {
+    img {
+        margin: auto 0px !important;
+    }
+    right: 15px;
+}
+
+// We don't use copy from
+.translation-field-copy-wrapper {
+    display: none;
+}
